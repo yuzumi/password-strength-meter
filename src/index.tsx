@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from 'serviceWorker';
 
-import App from './App';
+import App from 'App';
 
-import './index.css';
+import 'index.css';
 
 render(
   <App />, 
