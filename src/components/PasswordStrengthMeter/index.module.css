@@ -22,6 +22,40 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Webkit based browsers */
+.password-strength-meter__strength[value="1"]::-webkit-meter-optimum-value {
+  background: red;
+}
+
+.password-strength-meter__strength[value="2"]::-webkit-meter-optimum-value {
+  background: yellow;
+}
+
+.password-strength-meter__strength[value="3"]::-webkit-meter-optimum-value {
+  background: orange;
+}
+
+.password-strength-meter__strength[value="4"]::-webkit-meter-optimum-value {
+  background: green;
+}
+
+/* Gecko based browsers */
+.password-strength-meter__strength[value="1"]::-moz-meter-bar {
+  background: red;
+}
+
+.password-strength-meter__strength[value="2"]::-moz-meter-bar {
+  background: yellow;
+}
+
+.password-strength-meter__strength[value="3"]::-moz-meter-bar {
+  background: orange;
+}
+
+.password-strength-meter__strength[value="4"]::-moz-meter-bar {
+  background: green;
+}
+
 .password-strength-meter__label {
   padding-top: 0.5rem;
   font-size: 0.925rem;
