@@ -42,7 +42,7 @@ const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
 
   return (
     <div className={styles['password-strength-meter']}>
-      <progress
+      <meter
         className={styles['password-strength-meter__strength']}
         value={testedResult.score}
         max={4}
