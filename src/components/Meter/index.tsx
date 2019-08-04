@@ -18,7 +18,7 @@ const Meter: FunctionComponent = () => {
           <input
             className="meter__field"
             autoComplete="off"
-            type="password"
+            type="text"
             name="password"
             id="password"
             placeholder="Password"
