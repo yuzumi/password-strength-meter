@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import zxcvbn, { ZXCVBNResult, ZXCVBNScore } from 'zxcvbn';
-import './index.css';
+import styles from './index.module.css';
 
 export type PasswordStrengthLevels =
   | 'Very weak'
@@ -41,14 +41,14 @@ const PasswordStrengthMeter: FunctionComponent<PasswordStrengthMeterProps> = ({
   );
 
   return (
-    <div className="password-strength-meter">
+    <div className={styles['password-strength-meter']}>
       <progress
-        className="password-strength-meter__strength"
+        className={styles['password-strength-meter__strength']}
         value={testedResult.score}
         max={4}
       />
       {password && (
-        <p className="password-strength-meter__label">
+        <p className={styles['password-strength-meter__label']}>
           Password strength: {strengthLevel}
         </p>
       )}

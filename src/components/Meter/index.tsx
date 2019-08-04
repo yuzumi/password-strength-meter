@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, FormEvent } from 'react';
 import PasswordStrengthMeter from 'components/PasswordStrengthMeter';
-import './index.css';
+import styles from './index.module.css';
 
 const Meter: FunctionComponent = () => {
   const [password, setPassword] = useState<string>('');
@@ -12,23 +12,21 @@ const Meter: FunctionComponent = () => {
   };
 
   return (
-    <div className="app">
-      <div className="meter">
-        <div className="meter__group">
-          <input
-            className="meter__field"
-            autoComplete="off"
-            type="text"
-            name="password"
-            id="password"
-            placeholder="Password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-        </div>
-        <div className="meter__group">
-          <PasswordStrengthMeter password={password} />
-        </div>
+    <div className={styles['meter']}>
+      <div className={styles['meter__group']}>
+        <input
+          className={styles['meter__field']}
+          autoComplete="off"
+          type="text"
+          name="password"
+          id="password"
+          placeholder="Password"
+          value={password}
+          onChange={handlePasswordChange}
+        />
+      </div>
+      <div className={styles['meter__group']}>
+        <PasswordStrengthMeter password={password} />
       </div>
     </div>
   );
